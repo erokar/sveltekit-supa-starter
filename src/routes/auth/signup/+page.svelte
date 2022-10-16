@@ -44,7 +44,7 @@
 	<div role="alert">{successMessage}</div>
 {/if}
 
-<form id="loginform" on:click|preventDefault>
+<form id="loginform" on:submit|preventDefault={signUp}>
 	<input bind:value={email} id="login-username" type="text" name="username" placeholder="Email" />
 
 	<input
@@ -63,11 +63,9 @@
 		placeholder="Password confirmation"
 	/>
 
-	<!-- Button -->
-
-	<button on:click={signUp} id="btn-login">
+	<button id="btn-login">
 		{#if awaiting}
-			<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" />
+			TODO: Add spinner
 		{/if}
 		<span class="m-2">Sign Up</span>
 	</button>
