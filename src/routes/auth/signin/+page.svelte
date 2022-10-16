@@ -16,7 +16,7 @@
 			errorMessage = error.message
 		}
 
-		$: if ($page.data.session) {
+		$: if ($page.data.session?.user) {
 			goto('/')
 		}
 	}
